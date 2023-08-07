@@ -1,0 +1,73 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+canvas {
+    position: fixed;
+    margin: 0;
+    top: 0;
+    z-index: 0;
+}
+
+.slidecontainer {
+    position: fixed;
+    top: 10px;
+    left:10px;
+    padding: 10px;
+    width: 220px; /* Width of the outside container */
+    z-index: 1;
+    background-color: #333;
+    border-radius: 10px;
+  }
+
+  .slidecontainer label{
+      margin-bottom: -10px;
+      width: 200px;
+      text-align: center;
+      color: white;
+  }
+
+  hr {
+    background-color: #fff;
+    padding: 0;
+    margin: 10px;
+  }
+  
+  /* Mouse-over effects */
+  .slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+  }
+  
+  /* The slider itself */
+  .slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 200px;
+    height: 12px; /* Specified height */
+    background: #d3d3d3; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+    border-radius: 100px;
+  }
+  
+  /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: dodgerblue; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+    border-radius: 100px;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: dodgerblue; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+    border-radius: 100px;
+  }
