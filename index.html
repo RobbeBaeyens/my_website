@@ -120,10 +120,22 @@
             <div class="col-md-4 wie-box wow fadeInUp text-center">
                 <div class="row">
                     <div class="col-md-12">
-                        <p>Ik ben 24 jaar en ik heb Graduaat Programmeren gestudeerd aan de hogeschool Thomas More
+                        <p>Ik ben <span id="age"></span> jaar en ik heb Graduaat Programmeren gestudeerd aan de hogeschool Thomas More
                             Turnhout.<br>
                             Ik heb al meerdere werkervaringen gehad en ben momenteel op zoek naar een nieuwe werkervaring.</p>
                     </div>
+                    <script>
+                      function ageCalculation() {                            
+                        var dob = new Date("1999-08-29T00:00:00");                            
+                        var month_diff = Date.now() - dob.getTime();                            
+                        var age_d = new Date(month_diff);                            
+                        var year = age_d.getUTCFullYear();
+                        var age = Math.abs(year - 1970);
+                        return document.getElementById("age").innerHTML = age;
+                      }
+
+                      ageCalculation()
+                      </script>
                 </div>
             </div>
             <div class="col-md-4 wie-box wow fadeInDown text-center"
